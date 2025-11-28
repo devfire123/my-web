@@ -1,0 +1,116 @@
+.navbar {
+    background-color: rgba(10, 10, 10, 0.8);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-logo {
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 65, 0.5));
+}
+
+.logo-text {
+    text-transform: uppercase;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    text-align: center;
+    gap: 1rem;
+}
+
+.nav-item {
+    margin-left: 0;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-primary);
+    background-color: rgba(0, 255, 65, 0.05);
+    border-color: rgba(0, 255, 65, 0.2);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+}
+
+.nav-link::after {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 80px);
+        position: absolute;
+        top: 80px;
+        left: -100%%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        background-color: var(--bg-primary);
+        border-right: 1px solid var(--accent-primary);
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}

@@ -1,0 +1,152 @@
+.rankings-page {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.rankings-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.team-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid var(--accent-primary);
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
+}
+
+.team-icon {
+    color: var(--accent-primary);
+}
+
+.highlight {
+    color: var(--accent-secondary);
+    font-weight: bold;
+}
+
+/* Overall Stats Card */
+.overall-stats-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-box {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+}
+
+.stat-icon.gold {
+    color: #ffd700;
+}
+
+.stat-icon.cyan {
+    color: #00f5ff;
+}
+
+.stat-icon.purple {
+    color: #bf00ff;
+}
+
+.stat-info h3 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+}
+
+.stat-info p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+}
+
+/* CTF Table */
+.ctf-table-container {
+    overflow-x: auto;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ctf-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+}
+
+.ctf-table th,
+.ctf-table td {
+    padding: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ctf-table th {
+    background: rgba(0, 255, 65, 0.05);
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.ctf-table tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.ctf-name {
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.ctf-rank {
+    color: var(--text-secondary);
+}
+
+.ctf-rank.top-rank {
+    color: #ffd700;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.ctf-points,
+.ctf-rating {
+    color: var(--accent-secondary);
+}
+
+@media (max-width: 768px) {
+    .overall-stats-card {
+        grid-template-columns: 1fr;
+    }
+
+    .ctf-table th,
+    .ctf-table td {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}

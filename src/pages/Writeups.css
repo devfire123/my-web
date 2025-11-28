@@ -1,0 +1,29 @@
+.writeups-page {
+    padding: 4rem 0;
+}
+
+.writeups-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+/* Reusing grid styles from Home.css but ensuring they are available here if Home isn't loaded */
+.writeups-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.category-web-exploitation {
+    color: #ff0055;
+}
+
+.category-binary-exploitation {
+    color: #00f3ff;
+}
+
+.category-cryptography {
+    color: #9fef00;
+}
+
+/* Add more categories as needed */

@@ -1,0 +1,229 @@
+.admin-login-container {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    padding: 3rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.admin-input {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--accent-primary);
+    color: var(--text-primary);
+    border-radius: 4px;
+}
+
+.admin-dashboard,
+.admin-editor {
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.admin-header,
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.admin-actions,
+.editor-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.admin-table-container {
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.admin-table th {
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.action-cells {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+    transition: color 0.3s;
+}
+
+.icon-btn.edit:hover {
+    color: var(--accent-secondary);
+}
+
+.icon-btn.delete:hover {
+    color: #ff4444;
+}
+
+/* Editor Form */
+.editor-form {
+    padding: 2rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    color: var(--accent-primary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* Generic input styles - EXCLUDE checkbox */
+.form-group input:not([type="checkbox"]),
+.form-group textarea,
+.form-group select {
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    border-radius: 4px;
+}
+
+.form-group input:not([type="checkbox"]):focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--accent-secondary);
+    outline: none;
+}
+
+/* Checkbox specific styles */
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align left */
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--accent-primary);
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+/* Markdown Editor Overrides */
+.EasyMDEContainer {
+    background: white;
+    border-radius: 4px;
+    color: black;
+}
+
+.editor-toolbar {
+    border-color: #ddd;
+}
+
+.CodeMirror {
+    min-height: 400px;
+}
+
+/* Type Badges */
+.type-badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.type-writeup {
+    background-color: rgba(0, 255, 65, 0.1);
+    color: var(--accent-primary);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+}
+
+.type-blog {
+    background-color: rgba(255, 0, 255, 0.1);
+    color: #ff00ff;
+    border: 1px solid rgba(255, 0, 255, 0.3);
+}
+
+/* Ensure button alignment */
+.admin-actions .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 40px;
+    /* Fixed height for alignment */
+}
+
+/* Editor Toolbar Custom */
+.editor-toolbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+    background: var(--accent-secondary);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-sm:hover {
+    background: var(--accent-primary);
+}
